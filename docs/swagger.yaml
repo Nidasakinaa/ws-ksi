@@ -1,0 +1,269 @@
+basePath: /
+definitions:
+  controller.MenuItem:
+    properties:
+      _id:
+        type: string
+      calories:
+        type: number
+      category:
+        type: string
+      description:
+        type: string
+      image:
+        type: string
+      ingredients:
+        type: string
+      name:
+        type: string
+    type: object
+  controller.ReqMenuItem:
+    properties:
+      calories:
+        type: number
+      category:
+        type: string
+      description:
+        type: string
+      image:
+        type: string
+      ingredients:
+        type: string
+      name:
+        type: string
+    type: object
+  controller.ReqUser:
+    properties:
+      name:
+        type: string
+      password:
+        type: string
+      phone:
+        type: string
+      role:
+        description: '"admin" or "customer"'
+        type: string
+      username:
+        type: string
+    type: object
+  controller.User:
+    properties:
+      _id:
+        type: string
+      fullname:
+        type: string
+      password:
+        type: string
+      phonenumber:
+        type: string
+      role:
+        description: '"admin" or "customer"'
+        type: string
+      username:
+        type: string
+    type: object
+host: ws-kaloriku-4cf736febaf0.herokuapp.com
+info:
+  contact:
+    email: 714220040@std.ulbi.ac.id
+    name: API Support
+    url: https://github.com/Nidasakinaa
+  description: This is a sample swagger for Fiber
+  title: TES SWAGGER KALORIKU
+  version: "1.0"
+paths:
+  /delete/{id}:
+    delete:
+      consumes:
+      - application/json
+      description: Hapus data user.
+      parameters:
+      - description: Masukan ID
+        in: path
+        name: id
+        required: true
+        type: string
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+        "400":
+          description: Bad Request
+        "500":
+          description: Internal Server Error
+      summary: Delete data user.
+      tags:
+      - User
+  /insert:
+    post:
+      consumes:
+      - application/json
+      description: Input data user.
+      parameters:
+      - description: Payload Body [RAW]
+        in: body
+        name: request
+        required: true
+        schema:
+          $ref: '#/definitions/controller.ReqUser'
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/controller.User'
+        "400":
+          description: Bad Request
+        "500":
+          description: Internal Server Error
+      summary: Insert data user.
+      tags:
+      - User
+  /menu:
+    get:
+      consumes:
+      - application/json
+      description: Mengambil semua data menu.
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/controller.MenuItem'
+      summary: Get All Data Menu.
+      tags:
+      - MenuItem
+  /menu/{category}:
+    get:
+      consumes:
+      - application/json
+      description: Ambil per ID data menu.
+      parameters:
+      - description: Masukan category
+        in: path
+        name: id
+        required: true
+        type: string
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/controller.MenuItem'
+        "400":
+          description: Bad Request
+        "404":
+          description: Not Found
+        "500":
+          description: Internal Server Error
+      summary: Get By Category Data Menu.
+      tags:
+      - MenuItem
+  /menu/{id}:
+    get:
+      consumes:
+      - application/json
+      description: Ambil per ID data menu.
+      parameters:
+      - description: Masukan ID
+        in: path
+        name: id
+        required: true
+        type: string
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/controller.MenuItem'
+        "400":
+          description: Bad Request
+        "404":
+          description: Not Found
+        "500":
+          description: Internal Server Error
+      summary: Get By ID Data Menu.
+      tags:
+      - MenuItem
+  /update/{id}:
+    put:
+      consumes:
+      - application/json
+      description: Ubah data user.
+      parameters:
+      - description: Masukan ID
+        in: path
+        name: id
+        required: true
+        type: string
+      - description: Payload Body [RAW]
+        in: body
+        name: request
+        required: true
+        schema:
+          $ref: '#/definitions/controller.ReqUser'
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/controller.User'
+        "400":
+          description: Bad Request
+        "500":
+          description: Internal Server Error
+      summary: Update data user.
+      tags:
+      - User
+  /user:
+    get:
+      consumes:
+      - application/json
+      description: Mengambil semua data user.
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/controller.User'
+      summary: Get All Data User.
+      tags:
+      - User
+  /user/{id}:
+    get:
+      consumes:
+      - application/json
+      description: Ambil per ID data USER.
+      parameters:
+      - description: Masukan ID
+        in: path
+        name: id
+        required: true
+        type: string
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/controller.User'
+        "400":
+          description: Bad Request
+        "404":
+          description: Not Found
+        "500":
+          description: Internal Server Error
+      summary: Get By ID Data User.
+      tags:
+      - User
+schemes:
+- https
+- http
+swagger: "2.0"
