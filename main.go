@@ -1,26 +1,28 @@
 package main
 
 import (
-	"fmt"
-	"io/ioutil"
-	"net/http"
+    "github.com/gofiber/fiber/v2"
+    "github.com/gofiber/fiber/v2/middleware/cors"
+    "github.com/Nidasakinaa/ws-ksi/handler"
 )
 
 func main() {
-	// Simulasi penggunaan token curian untuk akses API
-	token := "TOKEN_CURAN"
+    app := fiber.New()
 
-	client := &http.Client{}
-	req, _ := http.NewRequest("GET", "http://target.com/api/user", nil)
-	req.Header.Set("Authorization", "Bearer "+token)
+    // Tambahkan middleware CORS
+    app.Use(cors.New(cors.Config{
+        AllowOrigins:     "http://127.0.0.1:5500", // Hanya izinkan frontend tertentu
+        AllowMethods:     "GET, POST, PUT, DELETE",
+        AllowHeaders:     "Content-Type, Authorization",
+        AllowCredentials: true, // 🔥 Wajib agar cookie bisa dikirim
+    }))
 
-	resp, err := client.Do(req)
-	if err != nil {
-		fmt.Println("Error:", err)
-		return
-	}
-	defer resp.Body.Close()
+    // Rute lainnya
+    app.Post("/login", handler.Login)
+    app.Post("/customer-login", handler.CustomerLogin)
+    app.Post("/logout", handler.Logout)
+    app.Post("/register", handler.Register)
+    app.Get("/dashboard", handler.DashboardPage)
 
-	body, _ := ioutil.ReadAll(resp.Body)
-	fmt.Println("Response:", string(body))
+    app.Listen(":3000")
 }
