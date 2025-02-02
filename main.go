@@ -1,34 +1,26 @@
 package main
 
 import (
-	"log"
-
-	"github.com/Nidasakinaa/ws-kaloriku/config"
-
-	"github.com/aiteung/musik"
-	"github.com/gofiber/fiber/v2/middleware/cors"
-
-
-	"github.com/Nidasakinaa/ws-kaloriku/url"
-	_ "github.com/Nidasakinaa/ws-kaloriku/docs"
-
-	"github.com/gofiber/fiber/v2"
+	"fmt"
+	"io/ioutil"
+	"net/http"
 )
 
-// @title TES SWAGGER KALORIKU
-// @version 1.0
-// @description This is a sample swagger for Fiber
-
-// @contact.name API Support
-// @contact.url https://github.com/Nidasakinaa
-// @contact.email 714220040@std.ulbi.ac.id
-
-// @host ws-kaloriku-4cf736febaf0.herokuapp.com
-// @BasePath /
-// @schemes https http
 func main() {
-	site := fiber.New(config.Iteung)
-	site.Use(cors.New(config.Cors))
-	url.Web(site)
-	log.Fatal(site.Listen(musik.Dangdut()))
+	// Simulasi penggunaan token curian untuk akses API
+	token := "TOKEN_CURAN"
+
+	client := &http.Client{}
+	req, _ := http.NewRequest("GET", "http://target.com/api/user", nil)
+	req.Header.Set("Authorization", "Bearer "+token)
+
+	resp, err := client.Do(req)
+	if err != nil {
+		fmt.Println("Error:", err)
+		return
+	}
+	defer resp.Body.Close()
+
+	body, _ := ioutil.ReadAll(resp.Body)
+	fmt.Println("Response:", string(body))
 }
