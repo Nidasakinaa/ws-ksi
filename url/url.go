@@ -21,7 +21,6 @@ func Web(page *fiber.App) {
 	page.Get("/checkip", controller.Homepage)
 	page.Get("/menu", controller.GetMenu)
 	page.Get("/menu/:id", controller.GetMenuID)
-	page.Get("/menu/:category", controller.GetMenuByCategory)
 	page.Post("/insert", controller.InsertDataMenu)
 	page.Put("/update/:id", controller.UpdateDataMenuItem)
 	page.Delete("/delete/:id", controller.DeleteMenuItemByID)
