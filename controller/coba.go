@@ -8,7 +8,7 @@ import (
 
 	inimodel "github.com/Nidasakinaa/be_KaloriKu/model"
 	cek "github.com/Nidasakinaa/be_KaloriKu/module"
-	"github.com/Nidasakinaa/ws-kaloriku/config"
+	"github.com/Nidasakinaa/ws-ksi/config"
 	"github.com/aiteung/musik"
 	"github.com/gofiber/fiber/v2"
 

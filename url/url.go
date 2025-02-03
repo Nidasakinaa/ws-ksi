@@ -1,8 +1,8 @@
 package url
 
 import (
-	"github.com/Nidasakinaa/ws-kaloriku/controller"
-	"github.com/Nidasakinaa/ws-kaloriku/handler"
+	"github.com/Nidasakinaa/ws-ksi/controller"
+	"github.com/Nidasakinaa/ws-ksi/handler"
 	"github.com/gofiber/fiber/v2"
 	"github.com/gofiber/swagger"
 )

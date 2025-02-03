@@ -1,4 +1,4 @@
-module github.com/Nidasakinaa/ws-kaloriku
+module github.com/Nidasakinaa/ws-ksi
 
 go 1.23.3
 
