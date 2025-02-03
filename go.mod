@@ -3,12 +3,13 @@ module github.com/Nidasakinaa/ws-ksi
 go 1.23.3
 
 require (
-	github.com/Nidasakinaa/be_KaloriKu v0.0.26
+	github.com/Nidasakinaa/KSI_be v0.0.1
+	github.com/Nidasakinaa/be_KaloriKu v0.1.1
 	github.com/aiteung/atdb v0.1.7
 	github.com/aiteung/musik v0.0.5
 	github.com/gofiber/fiber/v2 v2.52.6
 	github.com/gofiber/swagger v1.1.1
-	github.com/golang-jwt/jwt/v4 v4.4.2
+	github.com/golang-jwt/jwt/v4 v4.5.1
 	github.com/swaggo/swag v1.16.4
 	github.com/whatsauth/whatsauth v0.1.82
 	go.mau.fi/whatsmeow v0.0.0-20250104105216-918c879fcd19

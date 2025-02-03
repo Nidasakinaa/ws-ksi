@@ -15,8 +15,10 @@ github.com/Azure/azure-sdk-for-go/sdk/internal v1.0.0/go.mod h1:eWRD7oawr1Mu1sLC
 github.com/AzureAD/microsoft-authentication-library-for-go v0.8.1/go.mod h1:4qFor3D/HDsvBME35Xy9rwW9DecL+M2sNw1ybjPtwA0=
 github.com/KyleBanks/depth v1.2.1 h1:5h8fQADFrWtarTdtDudMmGsC7GPbOAu6RVB3ffsVFHc=
 github.com/KyleBanks/depth v1.2.1/go.mod h1:jzSb9d0L43HxTQfT+oSA1EEp2q+ne2uh6XgeJcm8brE=
-github.com/Nidasakinaa/be_KaloriKu v0.0.26 h1:E/4oXdIWu/4//EDpLNtVYJwhbLyg40dGMTdoxp8auCE=
-github.com/Nidasakinaa/be_KaloriKu v0.0.26/go.mod h1:ZIS7PGMS84uknJ7rLvJ7D5TOCSrLQObcyhK2u0CQSUE=
+github.com/Nidasakinaa/KSI_be v0.0.1 h1:EluyX/FQQeRP5zTQgh04YkABiXTfa1j7TZCGn/5m+Zw=
+github.com/Nidasakinaa/KSI_be v0.0.1/go.mod h1:myjF+HG6RRc9/vwAT0JUDCdX0MILDpv095f9tMSWJlU=
+github.com/Nidasakinaa/be_KaloriKu v0.1.1 h1:xCRSfPtkNo7c4mYgRgmhqOtLl2VBa3XUcipiwikxRFU=
+github.com/Nidasakinaa/be_KaloriKu v0.1.1/go.mod h1:ZIS7PGMS84uknJ7rLvJ7D5TOCSrLQObcyhK2u0CQSUE=
 github.com/aiteung/atdb v0.1.7 h1:EV7vk5ld8i1wlrzf9N3FGDcvYvQz0dCnb0m2WCbRFOk=
 github.com/aiteung/atdb v0.1.7/go.mod h1:pxLum1XaWHcrspqu3n8zHKix2h5czOIiwAgIMKl3cX0=
 github.com/aiteung/atmodel v0.0.4 h1:jz0/jPfVjiNxMGaP8Rfl+14cgJZ8uu1vg3a46L/nzBo=
@@ -57,8 +59,9 @@ github.com/gofiber/swagger v1.1.1 h1:FZVhVQQ9s1ZKLHL/O0loLh49bYB5l1HEAgxDlcTtkRA
 github.com/gofiber/swagger v1.1.1/go.mod h1:vtvY/sQAMc/lGTUCg0lqmBL7Ht9O7uzChpbvJeJQINw=
 github.com/gofiber/websocket/v2 v2.2.1 h1:C9cjxvloojayOp9AovmpQrk8VqvVnT8Oao3+IUygH7w=
 github.com/gofiber/websocket/v2 v2.2.1/go.mod h1:Ao/+nyNnX5u/hIFPuHl28a+NIkrqK7PRimyKaj4JxVU=
-github.com/golang-jwt/jwt/v4 v4.4.2 h1:rcc4lwaZgFMCZ5jxF9ABolDcIHdBytAFgqFPbSJQAYs=
 github.com/golang-jwt/jwt/v4 v4.4.2/go.mod h1:m21LjoU+eqJr34lmDMbreY2eSTRJ1cv77w39/MY0Ch0=
+github.com/golang-jwt/jwt/v4 v4.5.1 h1:JdqV9zKUdtaa9gdPlywC3aeoEsR681PlKC+4F5gQgeo=
+github.com/golang-jwt/jwt/v4 v4.5.1/go.mod h1:m21LjoU+eqJr34lmDMbreY2eSTRJ1cv77w39/MY0Ch0=
 github.com/golang-sql/civil v0.0.0-20190719163853-cb61b32ac6fe/go.mod h1:8vg3r2VgvsThLBIFL93Qb5yWzgyZWhEmBwUJWevAkK0=
 github.com/golang-sql/civil v0.0.0-20220223132316-b832511892a9 h1:au07oEsX2xN0ktxqI+Sida1w446QrXBRJ0nee3SNZlA=
 github.com/golang-sql/civil v0.0.0-20220223132316-b832511892a9/go.mod h1:8vg3r2VgvsThLBIFL93Qb5yWzgyZWhEmBwUJWevAkK0=

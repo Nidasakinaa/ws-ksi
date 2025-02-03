@@ -5,10 +5,10 @@ import (
 	"net/http"
 	"strings"
 
-	iniconfig "github.com/Nidasakinaa/be_KaloriKu/config"
-	inimodel "github.com/Nidasakinaa/be_KaloriKu/model"
-	cek "github.com/Nidasakinaa/be_KaloriKu/module"
-	"github.com/Nidasakinaa/ws-kaloriku/config"
+	iniconfig "github.com/Nidasakinaa/KSI_be/config"
+	inimodel "github.com/Nidasakinaa/KSI_be/model"
+	cek "github.com/Nidasakinaa/KSI_be/module"
+	"github.com/Nidasakinaa/ws-ksi/config"
 	"github.com/gofiber/fiber/v2"
 )
 
